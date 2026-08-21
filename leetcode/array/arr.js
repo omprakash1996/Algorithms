@@ -248,6 +248,8 @@ console.log(frequencyArray([1, 2, 3, 2, 4, 5, 6, 5]));
 // ----------------------------------------
 
 // 21.most frequency element in an array.
+
+/*
 function maxFrequency(arr) {
   let frequency = {};
   let maxNumber = null;
@@ -264,6 +266,9 @@ function maxFrequency(arr) {
 }
 const data = [1, 2, 3, 4, 5, 3, 4];
 console.log(maxFrequency(data));
+*/
+
+// or
 
 /*
 function mostFrequencyArray(arr) {
@@ -283,9 +288,9 @@ function mostFrequencyArray(arr) {
       maxNumbers.push(Number(key));
     }
   }
-
   return { maxNumbers, maxCount };
 }
-
 console.log(mostFrequencyArray([1, 2, 3, 4, 5, 3, 4]));
 */
+
+// 22
