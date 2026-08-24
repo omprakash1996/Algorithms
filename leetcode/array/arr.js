@@ -1,4 +1,4 @@
-// 1. sum of array.
+// #1.---------- sum of array.-----------------------
 
 /*
 function sum(arr) {
@@ -11,8 +11,8 @@ function sum(arr) {
 console.log(sum([1, 2, 3, 4, 5]));
 
 */
-// --------------------------------
-// 2. search element .
+
+// #2.-------- search element.-----------------------
 
 /*
 function searchElement(arr, element) {
@@ -26,9 +26,8 @@ function searchElement(arr, element) {
 console.log(searchElement([1, 2, 3, 4, 5], 4));
 
 */
-// -------------------------
 
-// 3. count odd even count.
+// #3.----------- count odd even count.-----------------
 
 /*
 function countOddEven(arr) {
@@ -45,8 +44,8 @@ function countOddEven(arr) {
 }
 console.log(countOddEven([1, 2, 3, 0, 4, 5]));
 */
-// ----------------------------------
-// 4. reverse array.
+// #4.---------- reverse array.--------------------
+
 /*
 function reverseArr(arr) {
   let left = 0;
@@ -62,8 +61,8 @@ function reverseArr(arr) {
 }
 console.log(reverseArr([1, 2, 3, 4, 5]));
 */
-// -----------------------------------
-// 5. target element.
+
+// #5.------------ target element.----------------
 
 /*
 function targetElement(arr, target) {
@@ -78,9 +77,7 @@ function targetElement(arr, target) {
 console.log(targetElement([1, 2, 3, 4], 3));
 */
 
-// ---------------------------------------------
-
-// 6.Find two sum / target element of an array.
+// #6.----------Find two sum / target element of an array.-----------------
 
 /*
 function twoSum(arr, target) {
@@ -95,8 +92,9 @@ function twoSum(arr, target) {
 }
 console.log(twoSum([1, 2, 3, 4, 5], 5));
 */
-// ---------------------------------------------
-// 7. Find the pair of two sum.
+
+// 7.--------- Find the pair of two sum.----------------------------
+
 /*
 function pairSum(arr, target) {
   let pair = [];
@@ -119,8 +117,8 @@ console.log(pairSum([1, 2, 3, 4, 5], 5));
 // 11.Find a subarray (contiguous elements) whose sum equals target.
 // 12.Find pair/triplet whose sum is closest to target.
 // 13.Count how many subarrays equal target (often solved with prefix sums + hashmap).
-// ------------------------------------------------
-// 14.Merge Two Sorted Lists in array.
+
+// #14.--------Merge Two Sorted Lists in array.----------------------------------
 
 /*
 function mergeSortedArray(arr1, arr2) {
@@ -136,9 +134,8 @@ function mergeSortedArray(arr1, arr2) {
 console.log(mergeSortedArray([1, 2, 3], [4, 5, 6]));
 
 */
-// ----------------------------------------
 
-// 15.Remove Duplicates from Sorted Array.
+// #15.--------Remove Duplicates from Sorted Array.---------------------------
 
 /*
 function removeDuplicate(arr) {
@@ -161,9 +158,8 @@ function removeDuplicate(arr) {
 }
 console.log(removeDuplicate([1, 2, 3, 4, 5, 3, 5]));
 */
-// -----------------------------------------------------
 
-// 16.find Duplicates value from Sorted Array.
+// #16.-------find Duplicates value from Sorted Array.----------------------
 
 /*
 function findDuplicate(arr) {
@@ -179,9 +175,8 @@ function findDuplicate(arr) {
 }
 console.log(findDuplicate([7, 2, 3, 7, 5, 3, 5]));
 */
-// --------------------------------------------
 
-// 17.remove element.
+// #17.--------remove element.---------------------------
 
 /*
 function removeElement(arr, element) {
@@ -195,9 +190,8 @@ function removeElement(arr, element) {
 }
 console.log(removeElement([1, 2, 3, -3, 7], -3));
 */
-// ----------------------------------------------
 
-// 18.Given an integer array nums, return true if any value appears at least twice in the array.
+// #18.Given an integer array nums, return true if any value appears at least twice in the array.--------------
 
 /*
 function appearTwice(arr) {
@@ -214,8 +208,8 @@ console.log(appearTwice([1, 2, 3, -3, 2]));
 console.log(appearTwice([1, 2, 3, -3]));
 
 */
-// -------------------------------------------
-// 19.Flartern Array.
+
+// #19.--------Flartern Array.----------------------------
 
 /*
 function flatArr(arr) {
@@ -231,9 +225,9 @@ function flatArr(arr) {
 }
 console.log(flatArr([1, [2, [3, 4]], 5, 6]));
 */
-// -----------------------------------------------
 
-// 20.frequency of array.
+// #20.----------frequency of array.----------------------------------
+
 /*
 function frequencyArray(arr) {
   let frequency = {};
@@ -245,9 +239,8 @@ function frequencyArray(arr) {
 }
 console.log(frequencyArray([1, 2, 3, 2, 4, 5, 6, 5]));
 */
-// ----------------------------------------
 
-// 21.most frequency element in an array.
+// #21.--------------most frequency element in an array.--------------------------
 
 /*
 function maxFrequency(arr) {
@@ -293,4 +286,116 @@ function mostFrequencyArray(arr) {
 console.log(mostFrequencyArray([1, 2, 3, 4, 5, 3, 4]));
 */
 
-// 22
+// #22-----Find the largest/smallest number in an array.-----------------
+
+/*
+function largestAndSmallest(arr) {
+  let largest = arr[0];
+  let smallest = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      largest = arr[i];
+    } else if (arr[i] < smallest) {
+      smallest = arr[i];
+    }
+  }
+  return { largest, smallest };
+}
+console.log(largestAndSmallest([9, 2, 7, 233, 1, -2, 67]));
+*/
+
+// #23.------ square of sorted array ----------------------
+
+/*
+function squareOfSortedArray(arr) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.push(arr[i] * arr[i]);
+  }
+  return result;
+}
+console.log(squareOfSortedArray([1, 2, 3, 4, 5]));
+
+*/
+
+// #23.------ square of array and sort the result----------------------
+
+/*
+function squareOfUnsortedArray(arr) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.push(arr[i] * arr[i]);
+  }
+  for (let i = 0; i < result.length; i++) {
+    for (j = i + 1; j < arr.length; j++) {
+      if (result[i] > result[j]) {
+        let temp = result[i];
+        result[i] = result[j];
+        result[j] = temp;
+      }
+    }
+  }
+  return result;
+}
+console.log(squareOfUnsortedArray([4, -2, 3, 2, 7, 5]));
+*/
+
+// #24.------ sum of positive number.----------------------
+
+/*
+function sumOfPositiveNumber(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      sum += arr[i];
+    }
+  }
+  return sum > 0 ? sum : "All sum are negative";
+}
+console.log(sumOfPositiveNumber([5, -2, 3, -1, 2]));
+*/
+
+// #25------------ add two decimal numbers.---------------
+
+/*
+function addDecimalNumbers(a, b) {
+  let sum = a + b;
+  return parseFloat(sum.toFixed(3));
+}
+console.log(addDecimalNumbers(2.234, 123.12));
+*/
+// #26--------Product of Array Except Self.-------------------------
+
+/*
+function productArrayExcept(arr) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    let product = 1;
+    for (let j = 0; j < arr.length; j++) {
+      if (i !== j) {
+        product *= arr[j];
+      }
+    }
+    result[i] = product;
+  }
+  return result;
+}
+console.log(productArrayExcept([1, 2, 3, 4])); // op: [24,12,8,6]
+*/
+
+// #27.-------find the second largest element of an array.------------------
+
+function secondLargestElement(arr) {
+  let largest = -Infinity;
+  let secondLargest = -Infinity;
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i] > largest){
+      secondLargest = largest;
+      largest = arr[i];
+    }else if(arr[i] > secondLargest && arr[i] < largest){
+      secondLargest = arr[i];
+    }
+  }
+  return secondLargest;
+}
+console.log(secondLargestElement([1, 2, 3, 4]));

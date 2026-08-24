@@ -488,9 +488,17 @@ console.log(totalCount.length);
 */
 
 // 29 .find data between age.
-
+/*
 const getDataInRange = data
   .filter((cur) => cur.age <= 40 && cur.age > 35)
   .map((cur) => cur.name);
 
 console.log(getDataInRange);
+*/
+
+// #30.-----------Display all skills in array--------------------
+
+/*
+const getAllSkills = data.flatMap((cur) => cur.skills);
+console.log(getAllSkills);
+*/
