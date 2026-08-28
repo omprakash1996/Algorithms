@@ -220,3 +220,94 @@ class Box<T>{
 const numberBox = new Box<number>(5);
 console.log(numberBox.getContent());
 */
+
+// #13.---Generic Constraints  ----
+
+/*
+function getLength<T extends { length: number }>(item: T): number {
+  return item.length;
+}
+console.log(getLength("hello"));
+console.log(getLength([1, 2, 3, 4]));   */
+
+// #14. interface extends vs type intersection ----
+
+/*
+interface Animal {
+  name: string;
+}
+interface Dog extends Animal {
+  breed: string;
+}
+type Cat = Animal & { color: string };
+
+const dog: Dog = {
+  name: "Buddy",
+  breed: "Golden Retriever",
+};
+
+const cat: Cat = {
+  name: "Whiskers",
+  color: "Black",
+};
+
+function printDogInfo(d: Dog): void {
+  console.log(`Dog name: ${d.name}, Breed: ${d.breed}`);
+}
+
+function printCatInfo(c: Cat): void {
+  console.log(`Cat name: ${c.name}, Color: ${c.color}`);
+}
+
+printDogInfo(dog);
+printCatInfo(cat); */
+
+// #15.Type Guards  --------------------
+
+/*
+function isString(x: unknown): x is string {
+  return typeof x === "string";
+}
+function processValue(x: string | number) {
+  if (typeof x === "string") {
+    console.log(x.toUpperCase());
+  } else {
+    console.log(x.toFixed(2));
+  }
+}
+const value1: unknown = "hello";
+if (isString(value1)) {
+  console.log("It's a string:", value1.toUpperCase());
+} else {
+  console.log("Not a string");
+}
+processValue("typescript");
+processValue(123.456);
+processValue(9);   */
+
+
+class Bird {
+  fly() {
+    console.log("flying");
+  }
+}
+class Fish {
+  swim() {
+    console.log("swimming");
+  }
+}
+function move(animal: Bird | Fish) {
+  if (animal instanceof Bird) {
+    animal.fly();
+  } else {
+    animal.swim();
+  }
+}
+const parrot = new Bird();
+const goldfish = new Fish();
+parrot.fly();     
+goldfish.swim();    
+
+move(parrot); 
+move(goldfish);
+ 

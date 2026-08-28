@@ -385,6 +385,7 @@ console.log(productArrayExcept([1, 2, 3, 4])); // op: [24,12,8,6]
 
 // #27.-------find the second largest element of an array.------------------
 
+/*
 function secondLargestElement(arr) {
   let largest = -Infinity;
   let secondLargest = -Infinity;
@@ -398,4 +399,181 @@ function secondLargestElement(arr) {
   }
   return secondLargest;
 }
-console.log(secondLargestElement([1, 2, 3, 4]));
+console.log(secondLargestElement([1, 2, 3, 4]));  */
+
+// #28.-------arrange 0 left side and 1 right side;------------------
+
+/*
+function segregateZero(arr) {
+  let left = 0;
+  let right = arr.length - 1;
+  while (left < right) {
+    while (arr[left] === 0 && left < right) {
+      left++;
+    }
+    while (arr[right] === 1 && left < right) {
+      right--;
+    }
+    if (left < right) {
+      let temp = arr[left];
+      arr[left] = arr[right];
+      arr[right] = temp;
+      left++;
+      right--;
+    }
+  }
+  return arr;
+}
+console.log(segregateZero([1, 1, 0, 1, 0]));   */
+
+// #29.-------arrange -ve left side and +ve right side.----------------
+
+/*
+
+function leftPosNegative(arr) {
+  let left = 0;
+  let right = arr.length - 1;
+  while (left < right) {
+    while (arr[left] < 0 && left < right) {
+      left++;
+    }
+    while (arr[right] > 0 && left < right) {
+      right--;
+    }
+    if (left < right) {
+      let temp = arr[left];
+      arr[left] = arr[right];
+      arr[right] = temp;
+      left++;
+      right--;
+    }
+  }
+  return arr;
+}
+console.log(leftPosNegative([2, -2, 3, -6, -1, 5]));  */
+
+// #29.-------Find miissing number.-------------------------
+
+/*
+function findMissingNumber(arr) {
+  let index = arr.length + 1;
+  for (let i = 1; i <= index; i++) {
+    let found = false;
+    for (j = 0; j < arr.length; j++) {
+      if (arr[j] === i) {
+        found = true;
+        break;
+      }
+    }
+    if (!found) return i;
+  }
+}
+console.log(findMissingNumber([2, 1, 3]));  */
+
+// #29.-------Plus One in array.-------------------------
+
+/*
+function plusOneInArray(arr) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.push(arr[i]);
+  }
+  let lastIndex = arr.length - 1;
+  result[lastIndex] = result[lastIndex] + 1;
+  return result;
+}
+console.log(plusOneInArray([1, 2, 3]));
+console.log(plusOneInArray([9]));   */
+
+// #30.-------find the common element in the array.--------
+
+/*
+function findCommonElement(arr1, arr2) {
+  let result = [];
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        result.push(arr1[i]);
+      }
+    }
+  }
+  return result;
+}
+console.log(findCommonElement([1, 3, 9, 5, 4, -3, 6], [-3, 4, 7, 12, 23])); */
+
+// #31.----check array is sorted or not, return true or false.-----
+
+/*
+function checkArrayIsSorted(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > arr[i + 1]) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(checkArrayIsSorted([4, 1, 3, 2, 5]));
+console.log(checkArrayIsSorted([1, 2, 3, 4, 5]));  */
+
+// #32.----31.Given two integer arrays nums1 and nums2,
+// return an array of their intersection. Each element in
+// the result must be
+// unique and you may return the result in any order.
+
+/*
+function intersection(arr1, arr2) {
+  let result = [];
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        let isExist = false;
+        for (k = 0; k < result.length; k++) {
+          if (result[k] == arr1[i]) {
+            isExist = true;
+            break;
+          }
+        }
+        if(!isExist){
+          result.push(arr1[i])
+        }
+        break;
+      }
+    }
+  }
+  return result;
+}
+console.log(intersection([1, 2, 2, 1], [2, 2]));  */
+
+// #33.----Find first missing positive integer in an array.-----
+
+/*
+function firstMissingPositive(arr) {
+  let number = 1;
+  while (true) {
+    let found = false;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] === number) {
+        found = true;
+        break;
+      }
+    }
+    if(!found){
+     return number;
+    }
+    number++;
+  }
+}
+console.log(firstMissingPositive([3, 4, -1, 1]));   */
+
+// #34.----Rotate array by 1 st position.-----
+
+function rotateArray(arr) {
+  if (arr.length === 0) return "Array is empty";
+  let last = arr[arr.length - 1];
+  for (let i = arr.length - 1; i > 0; i--) {
+    arr[i] = arr[i - 1];
+  }
+  arr[0] = last;
+  return arr;
+}
+console.log(rotateArray([1, 2, 3, 4, 5]));

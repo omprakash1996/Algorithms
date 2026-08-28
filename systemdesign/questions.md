@@ -42,6 +42,7 @@ request you are looking for?
 25.What happens using the wrong endpoint (/user instead of/users) or HTTP method (GET instead of 
 POST) causes 404 or 405 errors. 
 26.what happens API returns data in a different JSON structure then expected, breaking the UI.
+27.How to manage global API error handling? 
 <!------------------- #3.Security ---------------------------------------------->
 
 1.How to secure your global redux toolkit data?
@@ -52,6 +53,11 @@ POST) causes 404 or 405 errors.
 6.What is a CSRF attack? How does SameSite=Strict protect against it?
 7.What is credential stuffing and how do you defend against it? 
 8.How will you secure your app from XSS attacks? 
+9.Authentication vs Authorization
+10.Encryption vs Hashing
+11.Symmetric vs Asymmetric Encryption
+12.What is Salting and why is it important?
+13.Name some common hashing algorithms.
 
 <!--------------- #4.scienario based questions --------------------------------->
 
@@ -76,6 +82,9 @@ child component without rerendering the parent and other three child components.
 achieve this?
 14.If you are a backend developer producing poor-quality code and you ve already left the job, how can 
 the frontend team manage such endpoints individually? 
+15.If a login page is failed to login then what is the benefit of microservice architure rathen then monolithic?
+16.Should we write react code without jsx?
+17.Is it sequare to store sensitive data in frontend .env file?
 
 <!--------------------------- #5.CORS questions---------------------------------->
 
@@ -95,7 +104,7 @@ fix it?
 6.How do you prevent a user from accessing a protected route before the auth check completes? 
 7.What is routing in React.js and how is it implemented? 
 8.What are Private Routes and how can you implement them in react? 
-9.
+9.Difference between "useNavigate" and "<Navigate />"
 
 <!-----------------------#7.Cross-browser responsive----------------------------->
 
@@ -156,7 +165,7 @@ angular and vue?
 rejected? 
 10.How do you prevent a login page from being accessible after the user is logged in?
 11.How to pass tokens in Fronted?
-12.
+12.How would you design Role-Based Access Control (RBAC) in React?
 <!---------------------- #11.React js------------------------------------------------>
 
 1.what is React js and advantages of using React? 
@@ -197,8 +206,57 @@ rejected?
 they removed? 
 36.How do we handle unmounting logic inside a use Effect Hook?
 
+<!---------------------- #12.Hooks-------------------------------------------->
 
-<!---------------------- #12.javascript-------------------------------------------->
+1.What are React Hooks? 
+2.What are the most commonly used Hooks?
+3.Explain useState with an example?
+4.How does useEffect work?
+5.What does the dependency array in useEffect do? 
+6.Difference between useEffect and useLayoutEffect?
+7.what is useRef used for? 
+8.What is useContext?
+9.What is prop drilling and how do Hooks solve it? 
+10.Workflow of Context API.
+11.Explain useReducer.
+12.When would you use useReducer over useState?  
+13.Difference between useMemo and useCallback? 
+14.How do Hooks help with performance optimization?
+15.How would you prevent unnecessary re-renders?
+16.Why can't you call hooks conditionally? React relies on the order of hook calls to maintain state 
+between renders. Conditional hooks break this order, causing bugs.  
+17.Why does my effect run twice in development?  
+18.Should you wrap every function in useCallback?  
+19.Explain rules of hooks?
+20.What problem does useTransition solve? 
+21.useDeferredValue vs. debouncing — are they the same?
+22.How would you prevent an API race condition with hooks?
+23.Where should authentication state live?  
+24.What causes a hydration mismatch in SSR? 
+
+<!---------------------- #Redux and Redux toolkit--------------------------->
+
+1.what is redux?why we used it?
+2.what is redux toolkit ?why it used in modern application instade of redux?
+3.work flow of redux toolkit?
+4.what is useSelector()?
+5.what is useDispatch()?
+6.what is reducer?
+7.why used extra reducer in redux toolkit?
+8.what is configureStore?
+9.what is action?
+10.what is createSlice()?
+12.what is immer? what problem solved in redux tookkit?
+13.what is payload?
+14.what is dispatch?
+15.what is initial state?
+16.what is immutable state?
+17.what is pure function?
+18.what is middlewire?
+19.what is createAsyncThunk?
+
+<!---------------------- #13.javascript------------------------------------->
+
 1.what is javascript and features of javascript?
 2.what is hoisting?
 3.what is the difference between var,let and const?
@@ -229,3 +287,156 @@ JavaScript?
 26.What is Memory Management and how do you manage in javascript and its uses.
 27.what is execution context in javascript and its uses. 
 28.What is single page application?   
+29.What is a Constructor in JavaScript?
+30.What is a Recursive Function?
+31.Difference between "setTimeout" and "setInterval"?
+32.Explain the Node.js Event Loop?
+33.What are Microtasks and Macrotasks?
+34.What is EventEmitter?
+35.How does the Callback Queue work?
+36.How do you handle errors in synchronous and asynchronous operations?
+<!---------------------- #14.HTML and CSS------------------------------->
+
+1.What are semantic elements in HTML5? Why are they important? 
+2.What is the purpose of the <!DOCTYPE html> declaration? 
+3.What is the difference between block-level and inline elements? 
+4.What is the <meta> tag used for? 
+5.What are data attributes, and how are they used? 
+6.What are void elements in HTML?
+7.What is the contenteditable attribute? 
+8.What is the difference between HTML tags and elements? 
+9.What is the difference between “display: none” and “visibility: hidden”, when used as attributes to 
+the HTML element. 
+10..What are Web Workers?
+11.What is the Geolocation API in HTML5? 
+12.what is the css box model?
+13.Explain positioning in css?
+14.what is the difference between em,rem,px units and % in css?
+15.what is accessibility features in HTML?
+16.what is the difference between flexbox and grid?
+
+<!---------------------- #15.Typescript------------------------------->
+1.what is typescript? difference between typescript and javascript?
+2.what is the benifit of static typing?
+3.what is the purpose of tsconfig.json?
+4.How to install(use) typescript in react project?
+5.what is the basic data type in typescript?
+6.Difference between any,unknown and never?
+7.what is type inference?
+8.what is the difference between union type and intersection type?
+9.what are literal type?
+10.difference between interface and type?
+11.what is optional chaining?
+12.what is nullish coalescing?
+13.what are enum ?
+14.what is tuple?
+15.what is readonly?
+16.what is type assertion?
+17.what are generics?
+18.what is generic constraints?
+19.what is keyof?
+20.what is typeof?
+21.what is declaration merging?
+22.what is decorators?
+23.Explain oops concepts?
+
+<!---------------------- #16.jest and RTL----------------------------->
+1.what is jest?
+2.what unit testing?
+3.what is the diff between test() and it()?
+4.explain describe() in jest?
+5.what is jest matchers?
+6.Difference between toBe() and toEqual()?
+7.what is snapshot testing? why its required?
+8.what is mocking?
+9.what is jest.fn()?
+10.what is jest.mock()?
+11.How to test a async code?
+12.what are jest lifecycle method?
+13.what is code coverage?
+14.How do you test react component?
+15.what is the diff between unit testing and integration testing?
+16.How does jest run tests in parallel?
+17.what is best practices in jest?
+18.what is RTL?
+19.why do we use RTL with jest?
+20.what is render()?
+21.what is screen?
+22.Difference between getBy,queryBy and findBy?
+23.what is getByRole?
+24.what is getByTestId?
+25.How do you test a button click?
+26.How do you test a input field?
+27.How do you test a api data?
+28.what is the diff between fireEvent vs userEvent?
+29.How do you test a form?
+30.Difference between findBy and waitFor?
+31.How do you test react router?
+32.How do you test a protected route?
+33.How do you test a redux component?
+34.How do you test a component that uses context?
+35.How do you test a check box?
+36.How do you test a dropdown?
+37.How do you test a button is disable?
+38.How do you test an element is not present?
+39.what is cleanup()?
+40.what is act()?
+41.what is jest-dom?
+42.How do you test accessibility with RTL?
+43.what should you not test with RTL?
+44.API returns 500.How would you test it?
+45.API takes 5 seconds.what would you test?
+46.Login API returns 401.How do you test it?
+47.user click multiple times.what would you test?
+48.How would you test role based UI?
+49.what is RTL testing strategy in a real project?
+50.why we shouldnt test production API?
+
+<!---------------------- #17.GIT & CI/CD------------------------------>
+1.what is git?
+2.explain your git workflow in production deployment app?
+3.Diff bet git and github?
+4.Diff bet git Fetch and git pull?
+5.Diff bet git merge and git rebase?
+6.Diff bet git reset and git revert?
+7.Diff bet git add vs git commit?
+8.Diff bet git clone vs git fork?
+9.Diff bet git checkout vs git switch?
+10.Diff bet git stach vs git commit?
+11.Diff bet git cherry-pick vs git merge?
+12.Difference between branch and tag?
+13.What is a merge conflict?
+14.What is rebasing?
+15.What is a pull request?
+16.What is .gitignore? why used it?
+17.What is reflog?
+18.What is HEAD? 
+19.What is CI/CD? Explain Continuous Integration and Continuous Deployment/Delivery.
+20.Difference between Continuous Delivery and Continuous Deployment?
+21.Why is CI/CD important in modern software development? 
+22.Explain Blue-Green Deployment?
+23.How do you integrate automated tests into CI/CD?
+24.Your pipeline is failing intermittently — how do you debug?
+25.How do you secure CI/CD pipelines against supply chain attacks?
+
+
+<!---------------------- #18. Node.js------------------------------>
+
+1.What are Worker Threads?
+2.What is Middleware in Express.js?
+3.What is the Process Object in Node.js?
+4.How would you improve Node.js application security?
+5.How would you optimize Node.js code and server performance?
+6.Describe a difficult situation you faced while developing a Node.js application.
+7.Have you worked with REST frameworks other than Express.js?
+8.Explain the Node.js Event Loop?
+
+
+
+<!---------------------- #18. MySQL / SQL------------------------------>
+
+1.What is Normalization?
+2.Explain 1NF, 2NF and 3NF.
+3.How would you optimize an SQL query?
+4.What is Transaction Management?
+5.Subquery vs JOIN?

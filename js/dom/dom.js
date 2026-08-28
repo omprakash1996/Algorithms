@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // #7.-----------Get the value entered in an <input type="text"> when a button is clicked and log it,edit it update it.---
 
+/*
 document.addEventListener("DOMContentLoaded", () => {
   const input = document.querySelector("#text");
   const btn = document.querySelector("#btn");
@@ -130,4 +131,112 @@ document.addEventListener("DOMContentLoaded", () => {
     input.focus();
   });
 });    
+*/
 
+// #8.-----------add the value entered in an <input type="text"> when a button is clicked and log it,edit it update it,delete it.---
+/*
+    document.addEventListener("DOMContentLoaded", () => {
+      const input = document.querySelector("#text");
+      const btn = document.querySelector("#btn");
+      const output = document.querySelector("#output");
+
+      // CREATE: Add new item
+      btn.addEventListener("click", () => {
+        const value = input.value.trim();
+        if (value !== "") {
+          const container = document.createElement("div");
+
+          // Create h1
+          const h1 = document.createElement("h1");
+          h1.textContent = value;
+
+          // Edit button
+          const editBtn = document.createElement("button");
+          editBtn.textContent = "Edit";
+          editBtn.className = "edit";
+          editBtn.addEventListener("click", () => {
+            const newText = prompt("Edit item:", h1.textContent);
+            if (newText !== null && newText.trim() !== "") {
+              h1.textContent = newText.trim();
+            }
+          });
+
+          // Delete button
+          const deleteBtn = document.createElement("button");
+          deleteBtn.textContent = "Delete";
+          deleteBtn.className = "delete";
+          deleteBtn.addEventListener("click", () => {
+            container.remove();
+          });
+
+          // Append everything
+          container.appendChild(h1);
+          container.appendChild(editBtn);
+          container.appendChild(deleteBtn);
+          output.appendChild(container);
+
+          input.value = ""; // clear input
+        }
+      });
+    });    */
+
+ // #9.-----------Given an array of objects {id, name}, create a table dynamically and append it to the DOM.---
+ 
+ /* 
+ document.addEventListener("DOMContentLoaded", () => {
+      // Array of objects
+      const data = [
+        { id: 1, name: "Alice" },
+        { id: 2, name: "Bob" },
+        { id: 3, name: "Charlie" }, { id: 4, name: "om" }
+      ];
+
+      // Create table
+      const table = document.createElement("table");
+
+      // Create header row
+      const headerRow = document.createElement("tr");
+      const idHeader = document.createElement("th");
+      idHeader.textContent = "ID";
+      const nameHeader = document.createElement("th");
+      nameHeader.textContent = "Name";
+      headerRow.appendChild(idHeader);
+      headerRow.appendChild(nameHeader);
+      table.appendChild(headerRow);
+
+      // Loop through data and create rows
+      data.forEach(item => {
+        const row = document.createElement("tr");
+
+        const idCell = document.createElement("td");
+        idCell.textContent = item.id;
+
+        const nameCell = document.createElement("td");
+        nameCell.textContent = item.name;
+
+        row.appendChild(idCell);
+        row.appendChild(nameCell);
+        table.appendChild(row);
+      });
+
+      // Append table to container
+      document.getElementById("tableContainer").appendChild(table);
+    }); */
+
+// #10.-----On button click, change the src of an <img> tag to another image.-------------
+/*
+     document.addEventListener("DOMContentLoaded", () => {
+      const img = document.getElementById("myImage");
+      const btn = document.getElementById("swapBtn");
+
+      btn.addEventListener("click", () => {
+        // Check current src and swap
+        if (img.src.includes("Image+1")) {
+          img.src = "https://via.placeholder.com/200x150?text=Image+2";
+        } else {
+          img.src = "https://via.placeholder.com/200x150?text=Image+1";
+        }
+      });
+    });  */
+
+    
