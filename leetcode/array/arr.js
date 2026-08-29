@@ -567,6 +567,7 @@ console.log(firstMissingPositive([3, 4, -1, 1]));   */
 
 // #34.----Rotate array by 1 st position.-----
 
+/*
 function rotateArray(arr) {
   if (arr.length === 0) return "Array is empty";
   let last = arr[arr.length - 1];
@@ -576,4 +577,17 @@ function rotateArray(arr) {
   arr[0] = last;
   return arr;
 }
-console.log(rotateArray([1, 2, 3, 4, 5]));
+console.log(rotateArray([1, 2, 3, 4, 5])); */
+
+
+
+//--------#35.Remove the falsy values.-----
+/*
+function removeFalsyValue(arr){
+ let result= [];
+ for(let value of arr){
+    if(value) result.push(value);
+ }
+ return result;
+}
+console.log(removeFalsyValue([0, 1, false, 2, "", 3])); */
